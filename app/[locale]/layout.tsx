@@ -23,8 +23,9 @@ type Props = {
 const RootLayout: React.FC<Props> = ({
 	children,
 	params: { locale },
-	searchParams: { theme = Theme.LIGHT },
+	searchParams = { theme: Theme.LIGHT },
 }) => {
+	const { theme = Theme.LIGHT } = searchParams
 	const isValidLocale = locales.some((cur) => cur === locale)
 	if (!isValidLocale) notFound()
 
