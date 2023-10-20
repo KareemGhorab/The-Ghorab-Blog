@@ -1,6 +1,12 @@
 import { useTranslations } from 'next-intl'
 
-export default function Index() {
+const Index = () => {
 	const t = useTranslations()
-	return <h1>{t('Common.title')}</h1>
+	return <main>
+		<section className='flex'>
+			
+		</section>
+	</main>
 }
+
+export default Index
